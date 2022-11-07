@@ -1,0 +1,27 @@
+program tangga;
+uses crt;
+
+var
+    a  : byte;
+    h,p: integer;
+
+const
+    pi = 3.1415926536;
+
+begin
+    clrscr;
+    write('masukkan tinggi rumah(cm) :'); 
+    readln(h);
+    write('masukkan sudut tangga terhadap tanah(derajat) : ');
+    readln(a);
+    
+    if (a>=1) and (a<=89) and (h>=1) and (h<=10000) then
+    begin
+        p:=round(h/sin(a/(180/pi)));
+        write('panjang minimal tangga adalah ',p,' cm');
+    end
+    
+    else
+    write('nilai yang anda masukkan tidak valid');
+    readln;
+end.

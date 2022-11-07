@@ -1,0 +1,28 @@
+program kuadran;
+uses crt;
+
+var 
+    x,y : integer ;
+begin
+    clrscr;
+    write('masukan nilai dari koordinat x : ');
+    readln(x);
+    write('masukkan nilai dari koordinat y : ');
+    readln(y);
+    
+    if (x>0) and (x<=1000) and (y>0) and (y<=1000) then
+        write('Koordinat yang anda masukan berada pada kuadran I')
+        
+    else if (x<0) and (x>=-1000) and (y>0) and (y<=1000) then
+        write('Koordinat yang anda masukan berada pada kuadran II')
+        
+    else if (x<0) and (x>=-1000) and (y<0) and (y>=-1000) then
+        write('Koordinat yang anda masukan berada pada kuadran III')
+    
+    else if (x>0) and (x<=1000) and (y<0) and (y>=-1000) then
+        write('Koordinat yang anda masukan berada pada kuadran IV')
+    
+    else 
+        write('nilai yang anda input tidak valid');
+    readln;
+end.
